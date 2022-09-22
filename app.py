@@ -13,6 +13,7 @@ app.config.from_object(config.config['development'])
 app.register_error_handler(404, page_not_found)
 
 
+
 @app.route('/', methods=["GET", "POST"])
 def index():
 
@@ -35,6 +36,14 @@ def index():
 
     return render_template('index.html', **locals())
 
+
+@app.route('/feature/')
+def feature():
+    return render_template('feature.html')
+
+@app.route('/about-us/')
+def team():
+    return render_template('team.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='8888', debug=True)

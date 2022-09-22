@@ -35,7 +35,7 @@
             font-size:22px;
             }
           .jumbotron{
-            min-height:600px;
+            height:950px !important;
             }
           .p-5{
             max-width:1500px;
@@ -68,87 +68,18 @@
 
   <div class="jumbotron  d-flex flex-wrap justify-content-center">
     <div class="p-5 flex-wrap">
-      <h1 class="display-4">AI Blog Assistant</h1>
+      <h1 class="display-4">Features</h1>
       <p class="lead">"Artificial Intelligence tools are the latest trend in content writing, blogging, and general copywriting and marketers are increasingly using AI text generators to overcome writers block, produce content more quickly, and optimize their existing content.
-
-With a text generator, you can get a clear edge over competitors thanks to refined algorithms which help to generate highly targeted copy for your audience. When you use your unique skills and knowledge, along with the help of the AI, you will be able to produce articles that are even better than most text written by humans.This blog writing tool will allow you to enter a blog topic, keywords and get in return a full blog that you can use anywhere.</p>
+        With a text generator, you can get a clear edge over competitors thanks to refined algorithms which help to generate highly targeted copy for your audience. When you use your unique skills and knowledge, along with the help of the AI, you will be able to produce articles that are even better than most text written by humans.This blog writing tool will allow you to enter a blog topic, keywords and get in return a full blog that you can use anywhere.</p>
       <hr class="my-4">
       <p class="lead">
-        <a class="btn btn-outline-success btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-outline-success btn-lg" href="/" role="button">Write A Blog</a>
       </p>
     </div>
   </div>
 
 
 <!------------------------------------------------------>
-
-  <div class="container">
-      <div class="card">
-        <h5 class="card-header">Blog Ideas</h5>
-        <div class="card-body">
-          <h5 class="card-title">Find Ideas To Start Writing</h5>
-        <form class="" action="/" method="post">
-            <div class="mb-3">
-              <label for="blogTopic" class="form-label">What topic do you want to get blog ideas on?</label>
-              <input type="text" class="form-control" id="blogTopic" name="blogTopic" placeholder="Enter a blog topic">
-            </div>
-            <input type="hidden" name="form1" value="form1">
-
-            <button type="submit" id="blogTopicButton" class="btn btn-outline-primary">Generate Blog Ideas</button>
-          </form>
-          1.{{blogTopicIdeas|safe}}
-      </div>
-    </div>
-
-      <br>
-      <hr>
-      <br>
-
-
-
-
-
-    <div class="card">
-      <div class="card-header">
-        Blog Section
-    </div>
-    <div class="card-body">
-    <h5 class="card-title">Transform Blog Ideas Into Outline</h5>
-     <form class="" action="/" method="post">
-            <div class="mb-3">
-              <label for="blogSection" class="form-label">Enter the Blog Topic Below that you have selected to write about</label>
-              <input type="text" class="form-control" id="blogSection" name="blogSection" placeholder="Enter the blog title to generate blog sections on">
-            </div>
-            <input type="hidden" name="form2" value="form2">
-
-            <button type="submit" class="btn btn-outline-primary">Generate Blog Sections</button>
-          </form>
-      {{blogSectionIdeas|safe}}
-  </div>
-</div>
-
-
-      <br>
-      <hr>
-      <br>
-
-    <div class="card">
-        <h5 class="card-header">Paragraph Expander</h5>
-        <div class="card-body">
-          <h5 class="card-title">Enter the section title to expand the paragraphn</h5>
-        <form class="" action="/" method="post">
-            <div class="mb-3">
-              <label for="blogExpander" class="form-label">Enter the Blog section title you want to expand</label>
-              <input type="text" class="form-control" id="blogExpander" name="blogExpander" placeholder="Enter the blog section title">
-            </div>
-            <input type="hidden" name="form3" value="form3">
-
-            <button type="submit" class="btn btn-outline-primary">Expand on the title</button>
-          </form>
-          {{blogExpanded|safe}}
-      </div>
-    </div>
-  </div>
 
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

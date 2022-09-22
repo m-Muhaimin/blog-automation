@@ -2,11 +2,159 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>404</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>AI Blog Assistance</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/') }}">
+
+
+    <style>
+        html{
+            font-size: px;
+            }
+        .display-4{
+            font-weight: 500;
+            }
+        @media(min-width:576px){
+           html{
+            font-size: 20px;
+            }
+        .display-4{
+            font-weight: 500;
+            }
+         .navbar{
+            padding-left:300px;
+            padding-right:300px;
+            font-size:22px;
+            }
+          .jumbotron{
+            min-height:600px;
+            }
+          .p-5{
+            max-width:1500px;
+            margin-bottom:70px !important;
+            }
+           }
+
+    </style>
+
+
   </head>
   <body>
-    <div class="container">
-      <h1>This is the 404 Page</h1>
+  <!-------------- Navigation Menu ------------>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="http://127.0.0.1:8888/">AI Writer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav ">
+      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="{{ url_for('feature') }}">Features</a>
+      <a class="nav-item nav-link" href="{{ url_for('team') }}">About Us</a>
     </div>
+  </div>
+</nav>
+
+
+  <!----------------------------------->
+
+  <div class="jumbotron  d-flex flex-wrap justify-content-center">
+    <div class="p-5 flex-wrap">
+      <h1 class="display-4">AI Blog Assistant</h1>
+      <p class="lead">"Artificial Intelligence tools are the latest trend in content writing, blogging, and general copywriting and marketers are increasingly using AI text generators to overcome writers block, produce content more quickly, and optimize their existing content.
+
+With a text generator, you can get a clear edge over competitors thanks to refined algorithms which help to generate highly targeted copy for your audience. When you use your unique skills and knowledge, along with the help of the AI, you will be able to produce articles that are even better than most text written by humans.This blog writing tool will allow you to enter a blog topic, keywords and get in return a full blog that you can use anywhere.</p>
+      <hr class="my-4">
+      <p class="lead">
+        <a class="btn btn-outline-success btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
+  </div>
+
+
+<!------------------------------------------------------>
+
+  <div class="container">
+      <div class="card">
+        <h5 class="card-header">Blog Ideas</h5>
+        <div class="card-body">
+          <h5 class="card-title">Find Ideas To Start Writing</h5>
+        <form class="" action="/" method="post">
+            <div class="mb-3">
+              <label for="blogTopic" class="form-label">What topic do you want to get blog ideas on?</label>
+              <input type="text" class="form-control" id="blogTopic" name="blogTopic" placeholder="Enter a blog topic">
+            </div>
+            <input type="hidden" name="form1" value="form1">
+
+            <button type="submit" id="blogTopicButton" class="btn btn-outline-primary">Generate Blog Ideas</button>
+          </form>
+          1.{{blogTopicIdeas|safe}}
+      </div>
+    </div>
+
+      <br>
+      <hr>
+      <br>
+
+
+
+
+
+    <div class="card">
+      <div class="card-header">
+        Blog Section
+    </div>
+    <div class="card-body">
+    <h5 class="card-title">Transform Blog Ideas Into Outline</h5>
+     <form class="" action="/" method="post">
+            <div class="mb-3">
+              <label for="blogSection" class="form-label">Enter the Blog Topic Below that you have selected to write about</label>
+              <input type="text" class="form-control" id="blogSection" name="blogSection" placeholder="Enter the blog title to generate blog sections on">
+            </div>
+            <input type="hidden" name="form2" value="form2">
+
+            <button type="submit" class="btn btn-outline-primary">Generate Blog Sections</button>
+          </form>
+      {{blogSectionIdeas|safe}}
+  </div>
+</div>
+
+
+      <br>
+      <hr>
+      <br>
+
+    <div class="card">
+        <h5 class="card-header">Paragraph Expander</h5>
+        <div class="card-body">
+          <h5 class="card-title">Enter the section title to expand the paragraphn</h5>
+        <form class="" action="/" method="post">
+            <div class="mb-3">
+              <label for="blogExpander" class="form-label">Enter the Blog section title you want to expand</label>
+              <input type="text" class="form-control" id="blogExpander" name="blogExpander" placeholder="Enter the blog section title">
+            </div>
+            <input type="hidden" name="form3" value="form3">
+
+            <button type="submit" class="btn btn-outline-primary">Expand on the title</button>
+          </form>
+          {{blogExpanded|safe}}
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
+
